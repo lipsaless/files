@@ -71,3 +71,8 @@
   color: #999;
   font-size: 13px;
 }
+
+#box-container .loaderCircle {
+  display: flex;
+  justify-content: center;
+}
