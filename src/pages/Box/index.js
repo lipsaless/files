@@ -44,6 +44,11 @@ export default class Box extends Component {
       const progressUpload = {
         onUploadProgress: (progress) => {
           let progresso = Math.floor((progress.loaded * 100) / progress.total);
+          
+          if (progresso === 100) {
+            progresso = 99;
+          }
+
           this.setState({ contagem: progresso });
           return progresso;
         }
@@ -98,6 +103,9 @@ export default class Box extends Component {
             <Circle
               progress={this.state.contagem}
               progressColor="#7159c1" 
+              animate={true}
+              size={150}
+              lineWidth={14}
             />
           </span>
 
